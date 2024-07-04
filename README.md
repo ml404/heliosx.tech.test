@@ -1,7 +1,7 @@
 ### README
 # Consultation Management Service
 
-This project is a subscription management service built with Spring Boot. It provides APIs to manage customers, subscriptions, and other related entities. The service uses Swagger for API documentation and H2 for the in-memory database.
+This project is a consultation management service built with Spring Boot. It provides APIs to manage customers, subscriptions, and other related entities. The service uses Swagger for API documentation and H2 for the in-memory database.
 
 ## Notes
 
