@@ -12,10 +12,11 @@ This project is a subscription management service built with Spring Boot. It pro
     - Metric tracking using something akin to prometheus would be desirable to be able to track things such as traffic amount, response time, and request outcomes in an easily visualised medium of grafana.
     - Would increase logging across the code path for greater observability in elasticsearch/splunk.
     - Docker containerisation would be used
-    - Would have made two layers of DTOs, one to be served to the UI, one to be used for the database (could strip out the ids served to the web layer as they may not care)
+    - Would have made two layers of DTOs, one to be served to the UI, one to be used for the database (could strip out the ids served to the web layer as they may not care for example)
     - Did not have time to write unit tests for the controllers
-    - Extremely simple logic used for whether medication can be prescribed (all answers come back as no), would abstract that out to a service layer for calculation
+    - Extremely simple logic used for whether medication can be prescribed (if all answers come back as no then it's valid to prescribe), would abstract that out to a service layer for calculation
     - Would implement a question provider layer that could give different answers dynamically dependant on the type of product being asked about
+    - No CI/CD pipeline used (such as github actions)
 
 ## Instructions to Run the Application Locally
 
