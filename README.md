@@ -11,7 +11,9 @@ This project is a consultation management service built with Spring Boot. It pro
     - Authentication and authorisation are not implemented in this example. For a production system, would look to integrate security measures like Spring Security and JWT.
     - Metric tracking using something akin to prometheus would be desirable to be able to track things such as traffic amount, response time, and request outcomes in an easily visualised medium of grafana.
     - Would increase logging across the code path for greater observability in elasticsearch/splunk.
+    - Could use some concurrency with completable futures around lookups when going off to multiple tables as part of a CRUD operation (such as in prescription creation)
     - Docker containerisation would be used
+    - I would have a singular layer around the database to protect from deadlocks/race conditions/sync the cache across multiple running instances of the service
     - Would have made two layers of DTOs, one to be served to the UI, one to be used for the database (could strip out the ids served to the web layer as they may not care for example)
     - Did not have time to write unit tests for the controllers
     - Extremely simple logic used for whether medication can be prescribed (if all answers come back as no then it's valid to prescribe), would abstract that out to a service layer for calculation
